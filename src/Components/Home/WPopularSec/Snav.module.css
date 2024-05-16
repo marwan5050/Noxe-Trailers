@@ -1,0 +1,13 @@
+.NavLink{
+    background-color: #198754;
+    color: #fff;
+    padding: 0.5rem 1rem;
+   border-radius: 4px;
+   transition: all .3s;
+}
+
+
+.collapse.navbar-collapse .nav-item.active .nav-link {
+    --bs-nav-link-padding-y: 0 !important; /* Override Bootstrap's padding */
+  }
+

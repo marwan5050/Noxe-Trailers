@@ -1,0 +1,74 @@
+.backgroundimg{
+    background-size: cover;
+      background-position: center;
+      opacity: .1;
+      position:fixed;
+      top:0;
+      left:0;
+      right: 0;
+      bottom: 0;
+      width:100%;
+      height:100%;
+}
+
+.details{
+    position: relative;
+    z-index: 2;
+}
+
+
+.trycircle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;  
+  }
+
+
+  .star-rating {
+    display: flex;
+    flex-direction: row;
+    gap: 5px; 
+  }
+  
+  .star {
+    font-size: 25px; 
+    cursor: pointer;
+    color: #ddd; 
+  }
+  
+  .star.active {
+    color: gold; 
+  }
+ 
+
+.fav{
+  position: relative;
+  z-index: 44;
+}
+
+  .fav i:hover {
+    color: red; 
+    transition: color 0.3s; 
+    cursor: pointer;
+}
+
+.cardWidth{
+  width: 60%;
+}
+
+@media (min-width: 500px) {
+  .cardWidth {
+    width: 50%;
+    margin: auto;
+    
+    
+  }
+  
+}
+
+
+
+  
+
+  
+  

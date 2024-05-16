@@ -1,0 +1,14 @@
+.list{
+    color: #fff;
+    letter-spacing: 1px;
+    transition: all .4s;
+}
+
+.list:hover{
+    color: #ffc107;
+    letter-spacing: 1.1px;
+}
+.active button{
+    color: #0dcaf0 !important;
+    
+}

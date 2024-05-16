@@ -1,0 +1,13 @@
+.tvcardWidth{
+    width: 60%;
+  }
+  
+  @media (min-width: 500px) {
+    .tvcardWidth {
+      width: 50%;
+      margin: auto;
+      
+      
+    }
+    
+  }

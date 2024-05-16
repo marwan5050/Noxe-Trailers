@@ -1,0 +1,32 @@
+.toggleContainer{
+    /* width: 10%; */
+    /* height: 5%; */
+    border-radius: 25px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    flex-basis: 150px;
+}
+.toggleEle{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.day , .week {
+    padding: 2px 20px;
+    border-radius: 25px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+.active {
+    /* background-image: linear-gradient(to left, #aa1f23, #be3d21, #d0591d, #df7417, #eb9012); */
+    background-color: #ea5612;
+    color: #fff; 
+    cursor: pointer; 
+    transition: background-color .9s;
+    padding: 2px 20px;
+    border-radius: 25px;
+}

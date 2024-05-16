@@ -1,0 +1,29 @@
+.pagiSize{
+
+    width: 100%;
+}
+
+ 
+
+@media (min-width: 480px) {
+    .pagiSize {
+      width: 30%;
+      margin: auto;
+      
+      
+    }
+    
+  }
+  
+  @media (min-width: 768px) {
+    .pagiSize {
+      width: 50%;
+     
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .pagiSize {
+      width: 100%;
+    }
+  }
