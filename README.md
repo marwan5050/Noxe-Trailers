@@ -16,58 +16,105 @@
 
 ### Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Noxe Trailers is a web application built with React.js that allows users to explore trending movies, TV shows, and actors. Users can watch thousands of trailers, search for their favorite movies, TV shows, or actors, and view detailed biographies and filmographies of actors.Users also can add favorite movies or tvs to there list so can watch trailers later when ever they want. The app utilizes modern features of React, including routing, Context API, and data handling with React Query. It is designed as a single-page application (SPA) that is fully responsive and optimized for a seamless user experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1- Clone the repository:
+   git clone https://github.com/marwan5050/Noxe-Trailers.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2- Navigate to the project directory:
+   cd Noxe-Trailers
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3- Install the dependencies:
+   npm install
+   
+4- Start the development server:
+   npm start   
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once the development server is running, you can access the application by navigating to
+http://localhost:3000 in your web browser.
+From there, you can browse trending movies, TV shows, and actors, watch trailers, and use the search functionality to find specific content.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Multiple Components: The project is composed of multiple components for modularity and easier maintenance.
+- Reusable Components: Utilizing reusable components to enhance code reusability and maintainability.
+- Single Page Application (SPA): The project is structured as a single-page application for smoother navigation and better performance.
+- React Hooks: Leveraging the power of React hooks for managing component state and lifecycle methods.
+- Modern React Practices: The project follows best practices and employs modern techniques in React development, including the use of ternary operators, arrow functions, short-circuiting in 
+  logical operators, rest and spread operators, and more. These practices enhance code readability, performance, and maintainability.
+- SEO Optimization: React Helmet is utilized to improve SEO by optimizing metadata in certain components.
+- Figma Design: The project's design is based on Figma, ensuring a visually appealing and user-friendly interface that adheres to modern design principles. The design is meticulously 
+  translated into the project, providing a seamless user experience.
+- Responsive Design: The application is designed to be responsive, ensuring a consistent experience across different devices and screen sizes.
+- React Router DOM v6.4+: The latest version of React Router DOM is used for routing, providing enhanced features and performance improvements for navigation within the application.
+- Dynamic Routing: React Router DOM is utilized for passing parameters through routing, allowing the display of specific data in components.
+- Nested Routes: Organized routing structure for a clean navigation experience.
+- API Integrations: Integration with backend APIs to fetch and manage data.
+- API Requests Handling: Axios is employed for making HTTP requests to APIs.
+- Data Handling: Data fetched from APIs is efficiently handled using React Query.
+- Pagination: Efficiently browse through large lists of movies, TV shows, and actors.
+- Real-Time Search: Quickly find movies, TV shows, or actors with instant search results.
+- Display Images and Videos: Visual content presentation with high-quality images and video trailers.
+- Favorite List: Users can add their favorite movies or TV shows to a special component for easy access.
+- Custom Icons: Updated React icons and movie-related icons for a better user experience.
+- Dynamic Browser Tab Titles: Displays each component name in the browser tab for easier navigation.
+- Notification System: React Hot Toast is used to display notifications throughout the project.
+- Clean Code: The codebase adheres to best practices and is well-structured for readability and maintainability.    
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+
+## Dependencies
+
+Noxe Trailers relies on several key dependencies to provide a rich user experience:
+
+- FontAwesome: Icon library.
+- Bootstrap: CSS framework for responsive design.
+- Axios: Promise-based HTTP client for API requests.
+- React Query: Data fetching and caching library.
+- React Circular Progressbar: Progress bar component.
+- React Helmet: SEO component for managing document head.
+- React Hot Toast: Notifications component.
+- React Loader Spinner: Loading spinner component.
+- React Player: Media player component.
+- React Rating: Rating component.
+- React Router DOM: Router library for navigation (version 6.4+).
+- React Swiper: Slider component.
+
+## Technologies Used
+
+- React.js: JavaScript library for building user interfaces.
+- React Router: Declarative routing for React applications.
+- Context API: State management for sharing data across components.
+- React Query: Handling server state and caching.
+- Axios: HTTP client for making API requests.
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+We welcome contributions to Noxe Trailers! If you have suggestions, bug reports, or want to contribute code, please create a pull request or open an issue on GitHub.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is licensed under the MIT License.
 
-### Advanced Configuration
+## Contact Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+For any inquiries or further information, please contact:
+
+- Author: Marwan
+- GitHub: marwan5050
+- Email: marwanabdalla471@yahoo.com // marwanabdalla2015@gmail.com
 
 ### Deployment
 
