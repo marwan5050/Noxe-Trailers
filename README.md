@@ -96,7 +96,6 @@ Noxe Trailers relies on several key dependencies to provide a rich user experien
 - React Query: Handling server state and caching.
 - Axios: HTTP client for making API requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
 ## Contributing
 
@@ -114,10 +113,8 @@ For any inquiries or further information, please contact:
 - GitHub: marwan5050
 - Email: marwanabdalla471@yahoo.com // marwanabdalla2015@gmail.com
 
-### Deployment
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You Can visit The Webap From Here : https://marwan5050.github.io/Noxe-Trailers/
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
