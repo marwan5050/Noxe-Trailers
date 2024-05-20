@@ -53,7 +53,7 @@ export default function TrendingMovies() {
 
   useEffect(()=>{
     handleDayClick();
-    // handleWeekClick();
+    
   },[])
 
  
@@ -86,7 +86,8 @@ export default function TrendingMovies() {
 
       <Swiper 
         modules={[Autoplay]}
-        slidesPerView={5}
+        spaceBetween={20}
+        slidesPerView={1}
         speed={2000}
         autoplay={{delay : 3000}}
         loop={true}
@@ -100,6 +101,9 @@ export default function TrendingMovies() {
           768: {
               slidesPerView: 3, 
           },
+          992: {
+            slidesPerView: 4, 
+        },
           
           1024: {
               slidesPerView: 5, 
@@ -110,10 +114,10 @@ export default function TrendingMovies() {
 
         {data?.data.results.map((trmovie , index)=>
         <SwiperSlide  key={index}>
-         <div className='col px-2' >
+         <div className='col ' >
           <div className='poster mx-auto position-relative' style={{width:`90%`}}> 
               <div className='position-absolute  top-0 end-0 '>
-                < div className="badge text-center text-bg-primary p-2" style={{fontSize:'15px'}}>{trmovie.vote_average.toFixed(1)}</div>
+                < div className="badge text-center text-bg-primary " style={{fontSize:'15px'}}>{trmovie.vote_average.toFixed(1)}</div>
               </div>
             <Link to={`moviedetails/${trmovie.id}`}>
               <img src={imgPrefix + trmovie.poster_path} className='w-100' alt='poster' />

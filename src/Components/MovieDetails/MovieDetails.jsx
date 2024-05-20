@@ -15,7 +15,7 @@ import  { Autoplay } from 'swiper/modules';
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet';
 
-
+import avatar from '../Assets/Images/view-3d-film-reel.jpg'
 export default function MovieDetails() {
 
     const {id} = useParams();
@@ -95,15 +95,19 @@ const handleAddToWatchlist = () => {
     </Helmet>
     <div className={style.backgroundimg}  style={{backgroundImage: `url(${imgPrefix + (movieDetails?.data.backdrop_path ?  movieDetails?.data.backdrop_path :  movieDetails?.data.poster_path)})`}}></div>
 
-<div className={` mx-0 mx-md-4 ${style.details}`} >
+<div className={` container ${style.details}`} >
     <div className='row'>
       <div className='col-sm-12 col-md-2'>
         <div className='poster'>
+          {movieDetails?.data?.poster_path ? <>
           <img src={imgPrefix + movieDetails?.data?.poster_path} className='w-100' height={300} title='poster'/>
+          </>: <>
+          <img src={avatar} className='w-100' height={300} title='poster'/>
+          </>}
         </div>
       </div>
 
-      <div className='col-sm-12 col-md-6 ms-2 ms-md-0'>
+      <div className='col-sm-12 col-md-6 '>
         <div className='moviedetils  '>
           <h3 style={{color:'yellow' , lineHeight:'1.5' , fontStyle:'italic'}}>{movieDetails?.data.original_title}</h3>
 
@@ -131,15 +135,15 @@ const handleAddToWatchlist = () => {
             <p style={{fontSize:'18px' , letterSpacing:'1px' , lineHeight:'1.5'}}>{movieDetails?.data.overview}</p>
           </div>
 
-          <div className='d-sm-block d-md-flex justify-content-between text-capitalize  border-bottom'>
-            <p className='mx-2 fs-5' > status :  {movieDetails?.data.status} </p>
-            <p className='mx-2 fs-5'> release date : {movieDetails?.data.release_date}</p>
-            <p className='mx-2 fs-5'> runtime : {movieDetails?.data.runtime}</p>
+          <div className='d-md-block d-lg-flex justify-content-between text-capitalize  border-bottom'>
+            <p className='mx-sm-0 mx-md-1  fs-5' > status :  {movieDetails?.data.status ? movieDetails?.data.status : `Unknown` } </p>
+            <p className='mx-sm-0 mx-md-1 fs-5'> release date : {movieDetails?.data.release_date ? movieDetails?.data.release_date : `Unknown`}</p>
+            <p className='mx-sm-0 mx-md-1 fs-5'> runtime : {movieDetails?.data.runtime ? movieDetails?.data.runtime : `${30} min`}</p>
           </div>
         </div>
       </div>
 
-      <div className='col-sm-12 col-md-4  ms-2 ms-md-0'>
+      <div className='col-sm-12 col-md-4  '>
         
 
         <div className={`text-sm-start text-md-end  text-capitalize mt-4 ${style.fav} `} >
@@ -184,7 +188,7 @@ const handleAddToWatchlist = () => {
         <ReactPlayer
         url={`https://www.youtube.com/watch?v=${movieVideos?.data.results[0]?.key}`}
         controls
-        width="30%"
+        width="50%"
         height="200px"
         />
       </div> : <>
@@ -193,7 +197,7 @@ const handleAddToWatchlist = () => {
 
     <Swiper 
         modules={[Autoplay]}
-        slidesPerView={3}
+        slidesPerView={1}
       
         autoplay={{delay : 7000}}
         loop={true}

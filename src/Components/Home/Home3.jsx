@@ -21,7 +21,7 @@ export default function Home3() {
 <>
 
     
-    <div className={`row ${style.sliderContainer}`} >
+    <div className={` position-relative`} >
         {isLoading ? <>
          
         <div className='vh-100 d-flex justify-content-center align-items-center '>
@@ -49,7 +49,7 @@ export default function Home3() {
 
             {data?.data.results.map((mvimg , index)=>
             <SwiperSlide  key={index}>
-            <div className='col-12 ' key={index}>
+            <div  >
 
                 <div className={` ${style.imgContainer}`} >
                     <img src={imgPrefix + mvimg.backdrop_path} alt='poser'  className='w-100'/>
@@ -58,10 +58,10 @@ export default function Home3() {
             </SwiperSlide>)}
         </Swiper>
         <div className={` d-flex align-items-end  position-absolute top-0 start-0 end-0 bottom-0 z-1 ${style.layer}`}>
-                    <div className='ms-4 mb-4 '>
-                        <h2 className={`${style.header} text-white`}>Welcome.</h2>
-                        <h3 className={`text-info text-capitalize fs-1`}>Millions of movies, TV shows and people to discover. Explore now.</h3>
-                    </div>
+            <div className='container mb-4 '>
+                <h2 className={`${style.header} text-white`}>Welcome.</h2>
+                <h3 className={`text-info text-capitalize ${style.headerP}`}>Millions of movies, TV shows and people to discover. Explore now.</h3>
+            </div>
         </div>
         </>}
     </div>

@@ -1,3 +1,5 @@
+
+
 .slidevideos{
     width: 100% !important;
      
@@ -18,3 +20,26 @@
     font-size: 80px;
 }
 
+.headerP{
+    font-size: 40px;
+}
+
+@media screen and (max-width:600px) {
+    .header{
+        font-size: 50px;
+    }
+
+    .headerP{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .header{
+        font-size: 40px;
+    }
+
+    .headerP{
+        font-size: 18px;
+    }
+}

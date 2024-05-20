@@ -32,22 +32,22 @@ export default function Snav() {
   return (
     <>
 
-    <nav className="navbar navbar-expand-sm navbar-dark text-white mb-5 bg-transparient" style={{backgroundColor:`rgba(0,0,0,.2)`}}>
+    <nav className="navbar navbar-expand-md navbar-dark text-white mb-5 bg-transparient" style={{backgroundColor:`rgba(0,0,0,.2)`}}>
   <div className="container">
-    <NavLink className="navbar-brand text-info fst-italic fw-bold fs-3 text-capitalize" to="">latest trailers</NavLink>
+    <NavLink className="navbar-brand text-info fst-italic fw-bold  text-capitalize" to="">latest trailers</NavLink>
     <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon" />
     </button>
     <div className="collapse navbar-collapse" id="collapsibleNavId">
       <ul className="navbar-nav mx-auto mt-2 mt-lg-0 ">
        
-      <li className="nav-item mb-1 mb-md-0 mx-2">
+      <li className="nav-item mb-1 mb-md-0 ">
           <NavLink onClick={()=> handleNowplay()} className={  isNowActive ? `${navstyle.NavLink}` : 'nav-link'} to="/nowplaying">NowPlaying</NavLink>
         </li>
 
       
 
-        <li className="nav-item  mx-2">
+        <li className="nav-item  ">
           <NavLink onClick={()=> handleUpcoming()} className={({ isActive }) => (isActive ? `${navstyle.NavLink}` : 'nav-link')} to="/upcoming">UpComing</NavLink>
         </li>
 
@@ -55,13 +55,13 @@ export default function Snav() {
         
 
         
-        <li className="nav-item mx-2">
+        <li className="nav-item ">
           <NavLink onClick={()=> handlePopular()} className={({ isActive }) => (isActive ? `${navstyle.NavLink}` : 'nav-link')} to="/popular">Popular</NavLink>
         </li>
 
        
        
-        <li className="nav-item mx-2 mb-sm-5 my-md-0">
+        <li className="nav-item  ">
           <NavLink onClick={()=> handleTopRated()} className={({ isActive }) => (isActive ? `${navstyle.NavLink}` : 'nav-link')} to="/toprated">TopRated</NavLink>
         </li>
 
@@ -70,7 +70,7 @@ export default function Snav() {
         
       </ul>
 
-        <div className='mt-3 mt-md-0 '>
+        <div className='mt-3 mt-md-0 d-sm-block d-md-flex '>
         
         <button onClick={()=> handleMovies()} className={` btn btn-outline-success  me-2  text-capitalize ${selectedMediaType === 'movie' ? 'active' : ''}`} type="submit">movies</button>
         <button onClick={()=> handleTvs()} className={` btn btn-outline-success me-2 text-capitalize ${selectedMediaType === 'tv' ? 'active' : ''}`} type="submit">tvs</button>

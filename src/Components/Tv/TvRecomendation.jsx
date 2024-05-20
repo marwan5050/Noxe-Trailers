@@ -39,7 +39,7 @@ export default function TvRecomendation() {
 
       <Swiper 
         modules={[Autoplay]}
-        slidesPerView={5}
+        slidesPerView={1}
       
         autoplay={{delay : 5000}}
         loop={true}
@@ -52,6 +52,9 @@ export default function TvRecomendation() {
           },
           768: {
               slidesPerView: 3, 
+          },
+          992: {
+              slidesPerView: 4, 
           },
           
           1024: {

@@ -33,14 +33,14 @@ export default function ActorTv({Name}) {
   return (
     <>
 
-    <h3 className='text-capitalize my-2 ms-2 ms-md-0'>series of <span className='text-warning'>{Name}</span></h3>
+    <h3 className='text-capitalize my-2 '>series of <span className='text-warning'>{Name}</span></h3>
 
     <div className='row'>
     
 
     <Swiper 
         modules={[Autoplay]}
-        slidesPerView={5}
+        slidesPerView={1}
       
         autoplay={{delay : 7000}}
         loop={true}
@@ -54,9 +54,12 @@ export default function ActorTv({Name}) {
           768: {
               slidesPerView: 3, 
           },
+          992: {
+              slidesPerView: 4, 
+          },
           
           1024: {
-              slidesPerView: 4, 
+              slidesPerView: 5, 
           },
       }}
 

@@ -38,7 +38,7 @@ export default function MovieCast() {
 
       <Swiper 
         modules={[Autoplay]}
-        slidesPerView={4}
+        slidesPerView={1}
       
         autoplay={{delay : 5000}}
         loop={true}
@@ -81,11 +81,7 @@ export default function MovieCast() {
               />
             )}
             <div className="card-body">
-            {/* <Helmet>
-        <meta charSet="utf-8" />
-        <title>{ actor.name}</title>
-        
-      </Helmet> */}
+            
               <p className="card-title text-center my-1"> {actor.name}</p>
               <p className="card-text  text-center text-capitalize">
                <span className='text-warning'>role </span> : {actor.character}

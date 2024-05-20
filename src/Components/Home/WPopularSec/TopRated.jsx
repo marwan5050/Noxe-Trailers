@@ -124,7 +124,7 @@ export default function TopRated() {
   {selectedMediaType === 'movie' ? <> 
   <Swiper 
         modules={[Autoplay]}
-        slidesPerView={3}
+        slidesPerView={1}
         speed={2000}
         autoplay={{delay : 4000}}
         loop={true}
@@ -142,7 +142,7 @@ export default function TopRated() {
     >
   {videos?.map((video, index) => (
     <SwiperSlide  key={index}>
-  <div className='px-1' >
+  <div className='container' >
     {video?.data.results.find((result) => result.official) && ( 
       <ReactPlayer
         key={video.data.id} 
@@ -180,7 +180,7 @@ export default function TopRated() {
   {tvvideos?.map((video, ind) => (
         <SwiperSlide  key={ind}>
 
-    <div className='px-1' >
+    <div className='container' >
       
         {video?.data.results.find((result) =>  result.official) ? ( 
           <ReactPlayer

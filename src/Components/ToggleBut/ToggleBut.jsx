@@ -8,7 +8,7 @@ export default function ToggleBut({selected , headname ,firstbut , secondbut , h
   return (
     <>
     
-    <div className='head-content d-flex justify-content-between mb-3'>
+    <div className='head-content d-block-sm d-md-flex justify-content-between mb-3'>
       <h3 className=' text-capitalize fst-italic'>{headname}</h3>
 
       <div className={Togbut.toggleContainer}>

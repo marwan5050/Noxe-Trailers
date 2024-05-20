@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide  } from 'swiper/react';
 import  { Autoplay } from 'swiper/modules';
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet';
-
+import avatar from '../Assets/Images/view-3d-film-reel.jpg';
 
 export default function TvDetails() {
 
@@ -105,21 +105,25 @@ export default function TvDetails() {
 
     <div className={style.backgroundimg}  style={{backgroundImage: `url(${imgPrefix + (data?.data.backdrop_path ?  data?.data.backdrop_path :  data?.data.poster_path)})`}}></div>
 
-<div className=' mx-0 mx-md-4 position-relative z-3'>
+<div className=' container position-relative z-3'>
     <div className='row'>
       <div className='col-sm-12 col-md-2'>
         <div className='poster'>
+          {data?.data.poster_path ? <>
           <img src={imgPrefix + data?.data.poster_path}  alt='poster' className='w-100 ' />
+          </> : <>
+          <img src={avatar}  alt='poster' className='w-100 ' />
+          </>}
         </div>
 
       </div>
 
-      <div className='col-sm-12 col-md-6 ms-2 ms-md-0'>
+      <div className='col-sm-12 col-md-6 '>
         <div className='tvdetails'>
           <h3 style={{color:'yellow' , lineHeight:'1.5' , fontStyle:'italic'}}>{data?.data.name}</h3>
 
-          <div className='info  row fs-4 text-capitalize align-items-center'>
-            <div className={` col-md-2   ${style.trycircle}`}>
+          <div className='info   fs-4 text-capitalize align-items-center'>
+            <div className={`${style.trycircle}`}>
             <CircularProgressbar value={ratingWidth} minValue={0} maxValue={10} text={`${ratingWidth}`}
               styles={buildStyles({
                 textColor:"#fff",
@@ -129,18 +133,19 @@ export default function TvDetails() {
               })}
             />
             </div>
+          <div className='d-sm-block d-md-flex justify-content-between my-2'>
+              <div className='sessons  '>
+                <p>sessons : {data?.data.number_of_seasons}</p>
+              </div>
 
-            <div className='sessons col-md-4 '>
-              <p>sessons : {data?.data.number_of_seasons}</p>
-            </div>
-
-            <div className='sessons col-md-4 '>
-              <p>episodes : {data?.data.number_of_episodes}</p>
+              <div className='sessons  '>
+                <p>episodes : {data?.data.number_of_episodes}</p>
+              </div>
             </div>
           </div>
 
-          <div className='d-flex my-3'>{data?.data.genres.map((categorey , indexCat)=>
-            <div className='badge text-bg-danger mx-1 fs-6'  key={indexCat}>
+          <div className='d-sm-block d-md-flex '>{data?.data.genres.map((categorey , indexCat)=>
+            <div className='badge text-bg-danger  mx-1 fs-6'  key={indexCat}>
               {categorey.name} 
             </div>)}
           </div>
@@ -150,17 +155,17 @@ export default function TvDetails() {
             <p style={{fontSize:'18px' , letterSpacing:'1px' , lineHeight:'1.5'}}>{data?.data.overview}</p>
           </div>
 
-          <div className='d-sm-block d-md-flex justify-content-between text-capitalize  border-bottom'>
-            <p className='mx-1 fs-5' > status :  {data?.data.status} </p>
-            <p className='mx-1 fs-5'> release date : {data?.data.first_air_date}</p>
-            <p className='mx-1 fs-5'> episode time : {data?.data.episode_run_time && data?.data.episode_run_time.length > 0 ? data?.data.episode_run_time : 50  }</p>
+          <div className=' d-block  justify-content-between text-capitalize  border-bottom'>
+            <p className='mx-sm-0 mx-md-1 fs-5' > status :  {data?.data.status} </p>
+            <p className='mx-sm-0 mx-md-1 fs-5'> release date : {data?.data.first_air_date}</p>
+            <p className='mx-sm-0 mx-md-1 fs-5'> episode time : {data?.data.episode_run_time && data?.data.episode_run_time.length > 0 ? data?.data.episode_run_time : 50  }</p>
           </div>
 
 
         </div>
       </div>
 
-      <div className='col-sm-12 col-md-4  ms-2 ms-md-0  '>
+      <div className='col-sm-12 col-md-4    '>
         
 
         <div className={`text-sm-start text-md-end text-capitalize mt-4 ${style.fav}`} >
@@ -204,7 +209,7 @@ export default function TvDetails() {
 
       <Swiper 
         modules={[Autoplay]}
-        slidesPerView={4}
+        slidesPerView={1}
       
         autoplay={{delay : 7000}}
         loop={true}
@@ -218,10 +223,13 @@ export default function TvDetails() {
           768: {
               slidesPerView: 3, 
           },
+          992: {
+              slidesPerView: 4, 
+          },
           
           
           1024: {
-              slidesPerView: 4, 
+              slidesPerView: 5, 
           },
       }}
 
@@ -236,7 +244,11 @@ export default function TvDetails() {
             < div className="badge text-center text-bg-primary p-2" style={{fontSize:'15px'}}>{season.vote_average.toFixed(1)}</div>
           </div>
           <Link to={`/seasondetails/${id}/${season.season_number}`}>
+            {season.poster_path ? <>
              <img src={imgPrefix + season.poster_path} alt='poster' className='w-100' />
+             </> : <>
+             <img src={avatar} alt='poster' className='w-100' />
+             </>}
             </Link>
             </div>
           <div className='text-center'>{season.name}</div>

@@ -39,7 +39,7 @@ export default function TvCast() {
 
         <Swiper 
         modules={[Autoplay]}
-        slidesPerView={4}
+        slidesPerView={1}
       
         autoplay={{delay : 7000}}
         loop={true}

@@ -56,9 +56,9 @@
   width: 60%;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 600px) {
   .cardWidth {
-    width: 50%;
+    width: 40%;
     margin: auto;
     
     

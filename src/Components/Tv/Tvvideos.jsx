@@ -40,7 +40,7 @@ export default function Tvvideos() {
         <ReactPlayer 
         url={`https://www.youtube.com/watch?v=${videos?.key}`}
         controls
-        width="30%"
+        width="100%"
         height="200px"
         />
     </div>)
@@ -49,11 +49,11 @@ export default function Tvvideos() {
 
         {data?.data.results.length > 2 ? 
         
-        // <Slider  {...settings} > 
+         
 
       <Swiper 
         modules={[Autoplay]}
-        slidesPerView={3}
+        slidesPerView={1}
       
         autoplay={{delay : 7000}}
         loop={true}
@@ -95,7 +95,8 @@ export default function Tvvideos() {
        controls
        width="100%"
        height="200px"
-       />}
+       />
+       }
     
     </>}
 </>

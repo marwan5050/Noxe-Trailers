@@ -79,8 +79,8 @@ export default function NowPlaying() {
 
 
 
-const { data: videos, isLoading, error , refetch: videoreftech } = useQuery(`videodata` ,handlevideos);
-const { data: tvvideos, isLoading: loading , refetch: tvrefetch } = useQuery(`tvVideodata` ,handleTvvideos);
+const { data: videos, isLoading,  refetch: videoreftech } = useQuery(`videodata` ,handlevideos);
+const { data: tvvideos,  refetch: tvrefetch } = useQuery(`tvVideodata` ,handleTvvideos);
 
 
 
@@ -122,7 +122,7 @@ useEffect(()=>{
       
       <Swiper 
         modules={[Autoplay]}
-        slidesPerView={3}
+        slidesPerView={1}
       
         autoplay={{delay : 4000}}
         loop={true}
@@ -141,7 +141,7 @@ useEffect(()=>{
     >
       {videos?.map((video, index) => (
         <SwiperSlide  key={index}>
-      <div className='px-1' >
+      <div  className='container'>
         {video?.data.results.find((result) => result.official) && ( 
           <ReactPlayer
             key={video.data.id} 
@@ -179,7 +179,7 @@ useEffect(()=>{
     >
       {tvvideos?.map((video, ind) => (
         <SwiperSlide  key={ind}>
-        <div className='px-1' >
+        <div  className='container'>
           
             {video?.data.results.find((result) =>  result.official) ? ( 
               <ReactPlayer

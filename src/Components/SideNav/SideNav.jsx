@@ -48,10 +48,7 @@ export default function SideNav({mediaType }) {
       setActiveGenre(mediaType === 'movie' ? 'favmovie' : 'favtv');
     };
 
-    const handleFavtv = () => {
-      setSelectedGenre('favtv'); 
-      setActiveGenre('favtv');
-    };
+    
 
 
   return (

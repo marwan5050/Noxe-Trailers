@@ -53,7 +53,7 @@ export default function TrendingTv() {
 
   useEffect(()=>{
     handleDayClick();
-    // handleWeekClick();
+    
   },[])
 
  
@@ -86,8 +86,8 @@ export default function TrendingTv() {
 
         <Swiper 
         modules={[Autoplay]}
-        slidesPerView={5}
-      
+        slidesPerView={1}
+        spaceBetween={20}
         autoplay={{delay : 3000}}
         loop={true}
         speed={2000}
@@ -102,6 +102,9 @@ export default function TrendingTv() {
           768: {
               slidesPerView: 3, 
           },
+          992: {
+              slidesPerView: 4, 
+          },
           
           1024: {
               slidesPerView: 5, 
@@ -112,10 +115,10 @@ export default function TrendingTv() {
 
           {data?.data.results.map((trtv , index)=>
           <SwiperSlide  key={index}>
-           <div className='col px-2' >
+           <div className='col ' >
             <div className='poster mx-auto  position-relative' style={{width:`90%`}}> 
                 <div className='position-absolute top-0 end-0 '>
-                  < div className="badge text-center text-bg-primary p-2" style={{fontSize:'15px'}}>{trtv.vote_average.toFixed(1)}</div>
+                  < div className="badge text-center text-bg-primary " style={{fontSize:'15px'}}>{trtv.vote_average.toFixed(1)}</div>
                 </div>
               <Link to={`tvdetails/${trtv.id}`}>
                 <img src={imgPrefix + trtv.poster_path} className='w-100' alt='poster' />

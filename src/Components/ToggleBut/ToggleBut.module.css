@@ -5,7 +5,13 @@
     background-color: #ccc;
     display: flex;
     align-items: center;
-    flex-basis: 150px;
+    /* flex-basis: 150px; */
+}
+@media screen and (max-width:767px) {
+    .toggleContainer{
+        width: 50%;
+        margin: 20px 0px
+    }
 }
 .toggleEle{
     display: flex;
@@ -22,7 +28,7 @@
 
 
 .active {
-    /* background-image: linear-gradient(to left, #aa1f23, #be3d21, #d0591d, #df7417, #eb9012); */
+    
     background-color: #ea5612;
     color: #fff; 
     cursor: pointer; 

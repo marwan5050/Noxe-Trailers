@@ -9,8 +9,7 @@ export default function Pagination({mediaType}) {
 
   const {handllePage, handlleMoviePage , currentPage , totlalTvPag , moviePage , totalMvPage } = useContext(Trendmedia)
 
-    // const isFirstPage = currentPage === 1;
-    // const isLastPage = currentPage === totlalTvPag;
+    
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const isFirstPage = mediaType === 'movie' ? moviePage === 1 : currentPage === 1;
@@ -30,14 +29,14 @@ export default function Pagination({mediaType}) {
 
     useEffect(() => {
         const handleResize = () => {
-          setIsMobile(window.innerWidth < 768); // Update state on resize
+          setIsMobile(window.innerWidth < 768); 
         };
     
         window.addEventListener('resize', handleResize);
     
-        // Cleanup function to remove the event listener on component unmount
+        
         return () => window.removeEventListener('resize', handleResize);
-      }, []); // Empty dependency array ensures the effect runs only once on mount
+      }, []); 
 
 
 
@@ -46,7 +45,7 @@ export default function Pagination({mediaType}) {
 
 
     <nav aria-label="Page navigation">
-      {/* <ul className="pagination pagination-sm justify-content-center"> */}
+      
       <ul className={`pagination ${pagiSize.pagiSize} justify-content-center`}>
 
 

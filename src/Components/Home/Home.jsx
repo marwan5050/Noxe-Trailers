@@ -25,9 +25,9 @@ export default function Home() {
       
     </Helmet>
 
-    <div>
+     <div>
       <Home3/>
-    </div>
+    </div> 
 
     <div className='my-5'>
       <TrendingMovies/>
@@ -39,11 +39,11 @@ export default function Home() {
 
     
 
-<div className='container'>  
+  
        <div>
         <WPopularSec/>
         </div> 
-  </div>
+  
 
 
     <div className='my-5'>

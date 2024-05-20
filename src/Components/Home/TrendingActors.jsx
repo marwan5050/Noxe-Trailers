@@ -63,7 +63,7 @@ export default function TrendingActors() {
 
   useEffect(()=>{
     handleDayClick();
-    // handlePopularClick();
+    
   },[])
 
 
@@ -95,8 +95,8 @@ export default function TrendingActors() {
       
       <Swiper 
         modules={[Autoplay]}
-        slidesPerView={5}
-      
+        slidesPerView={1}
+        spaceBetween={20}
         autoplay={{delay : 4000}}
         loop={true}
         speed={2000}
@@ -110,7 +110,9 @@ export default function TrendingActors() {
           768: {
               slidesPerView: 3, 
           },
-          
+          992: {
+            slidesPerView: 4, 
+        },
           1024: {
               slidesPerView: 5, 
           },
@@ -119,10 +121,10 @@ export default function TrendingActors() {
       >
         {data?.data.results.map((tractor , index)=>
         <SwiperSlide  key={index}>
-         <div className='col px-2' >
+         <div className='col ' >
           <div className='poster mx-auto  position-relative' style={{width:`90%`}}> 
              <div className='position-absolute top-0 end-0 '>
-                < div className="badge text-center text-bg-primary p-2" style={{fontSize:'15px'}}>{tractor.popularity.toFixed(1)}</div>
+                < div className="badge text-center text-bg-primary " style={{fontSize:'15px'}}>{tractor.popularity.toFixed(1)}</div>
               </div>
             <Link to={`actorsdetails/${tractor.id}`}>
               {tractor.profile_path ?<>

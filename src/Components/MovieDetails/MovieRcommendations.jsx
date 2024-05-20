@@ -31,7 +31,7 @@ export default function MovieRcommendations() {
 
       <Swiper 
         modules={[Autoplay]}
-        slidesPerView={5}
+        slidesPerView={1}
       
         autoplay={{delay : 5000}}
         loop={true}

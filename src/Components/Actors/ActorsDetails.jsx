@@ -6,7 +6,7 @@ import { useQuery } from 'react-query';
 import ActorMovies from './ActorMovies';
 import ActorTv from './ActorTv';
 import { Helmet } from 'react-helmet';
-
+import avatar from '../Assets/Images/view-3d-film-reel.jpg';
 
 
 export default function ActorsDetails() {
@@ -43,15 +43,19 @@ export default function ActorsDetails() {
       
     </Helmet>
 
-<div className='mx-0 mx-md-4'>
+<div className='container'>
     <div className='row'>
       <div className='col-sm-12 col-md-2'>
         <div className='poster'>
+          {data?.data?.profile_path ? <>
           <img src={imgPrefix + data?.data?.profile_path} className='w-100' height={300} title='poster'/>
+          </> : <>
+          <img src={avatar} className='w-100' height={300} title='poster'/>
+          </>}
         </div>
       </div>
 
-      <div className='col-sm-12 col-md-8 ms-2 ms-md-0'>
+      <div className='col-sm-12 col-md-10 '>
         <div className='moviedetils'>
           <h3 className='text-capitalize fst-italic' style={{ lineHeight:'1.7'  }}> Name : <span className='text-warning'>{data?.data.name}</span></h3>
 
@@ -69,10 +73,10 @@ export default function ActorsDetails() {
             <p style={{fontSize:'20px' , letterSpacing:'1px' , lineHeight:'1.7'}}>{data?.data.biography}</p>
           </div>
 
-          <div className='d-sm-block d-md-flex justify-content-between text-capitalize  border-bottom'>
-            <p className='mx-2 fs-5' > birthday : <span className='text-warning'> {data?.data.birthday} </span> </p>
-            <p className='mx-2 fs-5'> place of birth : <span className='text-warning'> {data?.data.place_of_birth} </span></p>
-            <p className='mx-2 fs-5'> known for : <span className='text-warning'> {data?.data.known_for_department} </span></p>
+          <div className='d-block  justify-content-between text-capitalize  border-bottom'>
+            <p className='mx-sm-0 mx-md-2 fs-5' > birthday : <span className='text-warning'> {data?.data.birthday ? data?.data.birthday : `Unknown` } </span> </p>
+            <p className='mx-sm-0 mx-md-2 fs-5'> place of birth : <span className='text-warning'> {data?.data.place_of_birth ? data?.data.place_of_birth : `Unknown`} </span></p>
+            <p className='mx-sm-0 mx-md-2 fs-5'> known for : <span className='text-warning'> {data?.data.known_for_department ? data?.data.known_for_department : `Unknown`} </span></p>
           </div>
         </div>
       </div>
