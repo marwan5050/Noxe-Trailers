@@ -1,7 +1,5 @@
 # Title-> Noxe Trailers
 
-
-
 # Table of Contents
 
 - Introduction
