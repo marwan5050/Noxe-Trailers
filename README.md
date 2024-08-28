@@ -14,7 +14,7 @@
 
 ### Introduction
 
-Noxe Trailers is a web application built with React.js that allows users to explore trending movies, TV shows, and actors. Users can watch thousands of trailers, search for their favorite movies, TV shows, or actors, and view detailed biographies and filmographies of actors.Users also can add favorite movies or tvs to there list so can watch trailers later when ever they want. The app utilizes modern features of React, including routing, Context API, and data handling with React Query. It is designed as a single-page application (SPA) that is fully responsive and optimized for a seamless user experience.
+Noxe Trailers is a SPA Single Page application built with React.js that allows users to explore trending movies, TV shows, and actors. Users can watch thousands of trailers, search for their favorite movies, TV shows, or actors, and view detailed biographies and filmographies of actors.Users also can add favorite movies or tvs to there list so can watch trailers later when ever they want. The app utilizes modern features of React, including routing, Context API, and data handling with React Query. It is designed as a single-page application (SPA) that is fully responsive and optimized for a seamless user experience.
 
 
 
